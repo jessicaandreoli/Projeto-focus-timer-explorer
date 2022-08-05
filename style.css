@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-color: #121214;
+  --base-color: 194;
+  --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+  --primary-color: hsl(var(--base-color), 100%, 63%);
+  --text-color: #FFFFFF;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  display: grid;
+  height: 100vh;
+  background: var(--bg-color);
+}
+
+main {
+  width: clamp(10rem, 10rem + 30vw, 23rem);
+  height: clamp(8rem, 5rem + 10vw, 23rem);
+  justify-self: center;
+  align-self: end;
+}
+
+.hide {
+  display: none;
+}
+
+.page {
+  display: flex;
+  margin-bottom: 1.6rem;
+}
+
+span {
+  font-size: clamp(4.4rem, 4rem + 11vw, 8.8rem);
+  line-height: 10.3rem;
+  text-transform: uppercase;
+  color: var(--text-color)
+}
+
+.controls {
+  height: 10.8rem;
+  background: var(--bg-primary-light);
+  /*border Pill que chama esse 9999(pílula)*/
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 400ms;
+}
+
+button:active {
+  transform: scale(1.1);
+}
+
+button svg {
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+  height: 6.4rem;
+}
+
+.play svg path,
+.pause svg path,
+.sound-on svg path{
+  fill: var(--primary-color);
+}
+
+footer {
+  justify-self: end;
+  align-self: end;
+  padding: 0 4rem 3.2rem 0;
+}
